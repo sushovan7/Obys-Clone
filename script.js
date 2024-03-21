@@ -7,10 +7,10 @@ function locomotiveAnimation() {
       el: document.querySelector("#main"),
       smooth: true,
       mobile: {
-        smooth: false
+        smooth: true
     },
     tablet: {
-        smooth: false
+        smooth: true
     }
     });
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
@@ -187,3 +187,14 @@ function locomotiveAnimation() {
   locomotiveAnimation();
   sheryAnimation();
   flagAnimation()
+
+
+  setTimeout(() => {  
+    locoScroll.destroy();
+}, 0);
+setTimeout(() => {  
+    locoScroll.init();
+}, 50);
+setTimeout(() => {  
+    locoScroll.update();
+}, 1000);
